@@ -3,6 +3,11 @@ import logo from './logo.svg'
 import './App.css'
 import GenerateKeys from './GenerateKeys'
 import EncryptMessage from './EncryptMessage'
+import DecryptMessage from './DecryptMessage'
+
+window.toastr.options = {
+  progressBar: true
+}
 
 class App extends Component {
   constructor() {
@@ -30,7 +35,7 @@ class App extends Component {
             <EncryptMessage />
           </div>
           <div className='box'>
-            Decrypt message
+            <DecryptMessage />
           </div>
         </div>
       </div>

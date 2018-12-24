@@ -6,6 +6,7 @@ import Fab from '@material-ui/core/Fab'
 import VpnKeyIcon from '@material-ui/icons/VpnKey';
 import NodeRSA from 'node-rsa'
 import Markdown from 'react-markdown'
+import toClipboard from './toClipboard'
 
 export default class GenerateKeys extends Component {
   render() {
@@ -27,18 +28,24 @@ export default class GenerateKeys extends Component {
       <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gridGap: 15, fontSize: 10, height: 400}}>
         <div>
           <div style={{textAlign: 'center'}}>Private Key</div>
-          <div style={{backgroundColor: '#eee', borderRadius: 5, padding: 10}}>
-            {keypair && <div style={{wordBreak: 'break-all'}}>
+          <div className='clipboarder' style={{backgroundColor: '#eee', borderRadius: 5, padding: 10}} onClick={e => {
+            if(!keypair) return
+            toClipboard({label: 'Copied private key to clipboard', data: keypair.exportKey('private')})
+          }}>
+            {keypair ? <div style={{wordBreak: 'break-all'}}>
               {keypair.exportKey('private')}
-            </div>}
+            </div> : '-'}
           </div>
         </div>
         <div>
           <div style={{textAlign: 'center'}}>Public Key</div>
-          <div style={{backgroundColor: '#eee', borderRadius: 5, padding: 10}}>
-            {keypair && <div style={{wordBreak: 'break-all'}}>
+          <div className='clipboarder' style={{backgroundColor: '#eee', borderRadius: 5, padding: 10}} onClick={e => {
+            if(!keypair) return
+            toClipboard({label: 'Copied public key to clipboard', data: keypair.exportKey('public')})
+          }}>
+            {keypair ? <div style={{wordBreak: 'break-all'}}>
               {keypair.exportKey('public')}
-            </div>}
+            </div> : '-'}
           </div>
         </div>
       </div>

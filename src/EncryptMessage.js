@@ -6,24 +6,17 @@ import TextField from '@material-ui/core/TextField'
 import LockIcon from '@material-ui/icons/Lock';
 import NodeRSA from 'node-rsa'
 import Markdown from 'react-markdown'
+import toClipboard from './toClipboard'
 
 const encryptMessage = ({publicKey, message}) => new Promise((resolve, reject) => {
 
   if(!publicKey) return reject()
   if(!message) return reject()
 
-  console.log({publicKey, message})
   const key = new NodeRSA(publicKey)
   const encryptedMessage = key.encrypt(message, 'base64')
   resolve(encryptedMessage)
 })
-
-const key = new NodeRSA({b: 512})
-const text = 'Hello RSA!'
-const encrypted = key.encrypt(text, 'base64')
-console.log('encrypted: ', encrypted)
-const decrypted = key.decrypt(encrypted, 'utf8')
-console.log('decrypted: ', decrypted)
 
 export default class EncryptMessage extends Component {
   constructor() {
@@ -34,6 +27,12 @@ export default class EncryptMessage extends Component {
       publicKey: null,
       encryptedMessage: null
     }
+
+    // this.state = {
+    //   message: `hello`,
+    //   publicKey: `-----BEGIN PUBLIC KEY----- MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKN03GZ63BSzHRR+HDubybzdPI/viDzS ERxqm4rhL5OU7LKRtooKHRr+ObCkzn+sxtad6Y+nGVlIM8JMdPWIF/sCAwEAAQ== -----END PUBLIC KEY-----`,
+    //   encryptedMessage: `nlt0ak2dqgus1ExcoY1cBrkSUrMtO16LMItzCO3vD1jCqjyLxIWUBHcS5iRQKTKMoQmE4wbgslKbF47kl2JJDA==`
+    // }
   }
   render() {
     const {message, publicKey, encryptedMessage} = this.state
@@ -57,6 +56,7 @@ export default class EncryptMessage extends Component {
               multiline
               margin="normal"
               variant="outlined"
+              value={message ? message : ''}
               onChange={e => setMessage(e.target.value)}
             />
           </div>
@@ -73,6 +73,7 @@ export default class EncryptMessage extends Component {
               multiline
               margin="normal"
               variant="outlined"
+              value={publicKey ? publicKey : ''}
               onChange={e => setPublicKey(e.target.value)}
             />
           </div>
@@ -87,21 +88,15 @@ export default class EncryptMessage extends Component {
             </Fab>
           </div>
         </div>
-        <div style={{marginBottom: 10}}>
-          <div>This is the encrypted text</div>
-          <div>
-            <TextField
-              disabled={true}
-              fullWidth={true}
-              id="outlined-textarea"
-              label="Encrypted message"
-              placeholder="Encrypted message"
-              multiline
-              margin="normal"
-              variant="outlined"
-              onChange={e => setPublicKey(e.target.value)}
-              value={encryptedMessage ? encryptedMessage : ''}
-            />
+        <div>
+          <div style={{textAlign: 'center'}}>The encrypted message</div>
+          <div className='clipboarder' style={{backgroundColor: '#eee', borderRadius: 5, padding: 10}} onClick={e => {
+            if(!encryptedMessage) return
+            toClipboard({label: 'Copied encrypted message to clipboard', data: encryptedMessage})
+          }}>
+            {encryptedMessage ? <div style={{wordBreak: 'break-all'}}>
+              {encryptedMessage}
+            </div> : '-'}
           </div>
         </div>
       </div>
