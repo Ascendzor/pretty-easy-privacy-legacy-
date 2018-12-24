@@ -81,7 +81,7 @@ export default class DecryptMessage extends Component {
           </div>
         </div>
         <div style={{marginBottom: 40}}>
-          <div style={{marginBottom: 10}}>Click this button to create the encrypted text</div>
+          <div style={{marginBottom: 10}}>Click this button to create the decrypt the message</div>
           <div>
             <Fab size="small" color="secondary" onClick={() => {
               decryptMessage({privateKey, encryptedMessage}).then(decryptedMessage => this.setState({decryptedMessage}))

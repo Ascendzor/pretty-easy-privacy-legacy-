@@ -11,6 +11,7 @@ import Joyride from 'react-joyride'
 window.toastr.options = {
   progressBar: true
 }
+window.jQuery = window.$
 
 const joyrideSteps = [
   {
