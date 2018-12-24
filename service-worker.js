@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/pretty-easy-privacy/precache-manifest.d43dcaaa07f00239f5acc3c508321041.js"
+  "/pretty-easy-privacy/precache-manifest.c200b348bcb3274d5782b5c25b2ab6e9.js"
 );
 
 workbox.clientsClaim();

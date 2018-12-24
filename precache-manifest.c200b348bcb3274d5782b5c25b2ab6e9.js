@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/pretty-easy-privacy/static/css/main.b71c3b4e.chunk.css"
   },
   {
-    "revision": "9355ce328e92a6f4f0516bdcede6df42",
+    "revision": "0ffef12b27db6b62207bc78ad1c9e53c",
     "url": "/pretty-easy-privacy/index.html"
   }
 ];
