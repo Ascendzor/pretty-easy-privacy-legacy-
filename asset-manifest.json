@@ -1,7 +1,7 @@
 {
   "main.css": "/pretty-easy-privacy/static/css/main.b71c3b4e.chunk.css",
-  "main.js": "/pretty-easy-privacy/static/js/main.ab1d2dd1.chunk.js",
-  "main.js.map": "/pretty-easy-privacy/static/js/main.ab1d2dd1.chunk.js.map",
+  "main.js": "/pretty-easy-privacy/static/js/main.34f6db89.chunk.js",
+  "main.js.map": "/pretty-easy-privacy/static/js/main.34f6db89.chunk.js.map",
   "static/js/1.4117542a.chunk.js": "/pretty-easy-privacy/static/js/1.4117542a.chunk.js",
   "static/js/1.4117542a.chunk.js.map": "/pretty-easy-privacy/static/js/1.4117542a.chunk.js.map",
   "runtime~main.js": "/pretty-easy-privacy/static/js/runtime~main.fbd4d461.js",
@@ -9,6 +9,6 @@
   "static/media/logo.svg": "/pretty-easy-privacy/static/media/logo.5d5d9eef.svg",
   "static/css/main.b71c3b4e.chunk.css.map": "/pretty-easy-privacy/static/css/main.b71c3b4e.chunk.css.map",
   "index.html": "/pretty-easy-privacy/index.html",
-  "precache-manifest.bdfc92704420f3b45aaa9131dfa4197a.js": "/pretty-easy-privacy/precache-manifest.bdfc92704420f3b45aaa9131dfa4197a.js",
+  "precache-manifest.d43dcaaa07f00239f5acc3c508321041.js": "/pretty-easy-privacy/precache-manifest.d43dcaaa07f00239f5acc3c508321041.js",
   "service-worker.js": "/pretty-easy-privacy/service-worker.js"
 }

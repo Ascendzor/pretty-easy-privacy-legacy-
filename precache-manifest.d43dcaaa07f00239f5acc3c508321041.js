@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/pretty-easy-privacy/static/js/runtime~main.fbd4d461.js"
   },
   {
-    "revision": "ab1d2dd198040700ddb6",
-    "url": "/pretty-easy-privacy/static/js/main.ab1d2dd1.chunk.js"
+    "revision": "34f6db89dec73753184b",
+    "url": "/pretty-easy-privacy/static/js/main.34f6db89.chunk.js"
   },
   {
     "revision": "4117542a95b4fa116d41",
     "url": "/pretty-easy-privacy/static/js/1.4117542a.chunk.js"
   },
   {
-    "revision": "ab1d2dd198040700ddb6",
+    "revision": "34f6db89dec73753184b",
     "url": "/pretty-easy-privacy/static/css/main.b71c3b4e.chunk.css"
   },
   {
-    "revision": "8b16ddd8f8da157d741a601484ffa8c0",
+    "revision": "9355ce328e92a6f4f0516bdcede6df42",
     "url": "/pretty-easy-privacy/index.html"
   }
 ];
