@@ -57,8 +57,8 @@ const joyrideSteps = [
       <div>Alice will take Bobs <span style={{fontWeight: 'bold'}}>PublicKey</span>, and then use that to encrypt her message.</div>
       <div>Alice will then have an encrypted message, that Bob can decrypt.</div>
       <div>Alice sends Bob that encrypted message.</div>
-      <div>Bob now has the encrypted message, and Bob still has his <span style={{fontWeight: 'bold'}}>PrivateKey</span>.</div>
-      <div>Bob is able to decrypt the message.</div>
+      <div>Bob now has the encrypted message.</div>
+      <div>Bob still has his <span style={{fontWeight: 'bold'}}>PrivateKey</span>, so Bob can decrypt the message.</div>
     </div>,
     placement: 'center',
     target: '.App-header',
