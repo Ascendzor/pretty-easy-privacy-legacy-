@@ -36,6 +36,7 @@ export default class EncryptMessage extends Component {
   }
   render() {
     const {message, publicKey, encryptedMessage} = this.state
+    const {disabled} = this.props
 
     const setMessage = message => this.setState({message})
     const setPublicKey = publicKey => this.setState({publicKey})
@@ -81,7 +82,7 @@ export default class EncryptMessage extends Component {
         <div style={{marginBottom: 40}}>
           <div style={{marginBottom: 10}}>Click this button to create the encrypted text</div>
           <div>
-            <Fab size="small" color="secondary" onClick={() => {
+            <Fab size="small" color="secondary"  disabled={disabled} onClick={() => {
               encryptMessage({publicKey, message}).then(encryptedMessage => this.setState({encryptedMessage}))
             }}>
               <LockIcon />

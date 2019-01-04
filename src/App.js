@@ -128,7 +128,7 @@ class App extends Component {
     this.state = {
       keypair: null,
       doingTutorial: false,
-      tutorialStepIndex: 9
+      tutorialStepIndex: 0
     }
 
     this.joyride = React.createRef()
@@ -189,13 +189,18 @@ class App extends Component {
             <GenerateKeys
               setKeypair={keypair => this.setState({keypair})}
               keypair={keypair}
+              disabled={doingTutorial}
             />
           </div>
           <div className='box encryptMessage'>
-            <EncryptMessage />
+            <EncryptMessage
+              disabled={doingTutorial}
+            />
           </div>
           <div className='box decryptMessage'>
-            <DecryptMessage />
+            <DecryptMessage
+              disabled={doingTutorial}
+            />
           </div>
         </div>
       </div>

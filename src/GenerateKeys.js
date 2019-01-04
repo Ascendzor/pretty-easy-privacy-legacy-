@@ -10,7 +10,7 @@ import toClipboard from './toClipboard'
 
 export default class GenerateKeys extends Component {
   render() {
-    const {keypair, setKeypair} = this.props
+    const {keypair, setKeypair, disabled} = this.props
     const generateKeys = () => {
       setKeypair(new NodeRSA({b: 512}))
     }
@@ -21,7 +21,7 @@ export default class GenerateKeys extends Component {
       </div>
       <div style={{marginBottom: 20}}>
         <div style={{marginBottom: 10}}>Click this button to generate a new keypair</div>
-        <Fab size="small" color="secondary" onClick={generateKeys}>
+        <Fab size="small" color="secondary" onClick={generateKeys} disabled={disabled}>
           <VpnKeyIcon />
         </Fab>
       </div>

@@ -3,7 +3,7 @@ import Paper from '@material-ui/core/Paper'
 import Icon from '@material-ui/core/Icon'
 import Fab from '@material-ui/core/Fab'
 import TextField from '@material-ui/core/TextField'
-import LockIcon from '@material-ui/icons/Lock';
+import LockIcon from '@material-ui/icons/LockOpen'
 import NodeRSA from 'node-rsa'
 import Markdown from 'react-markdown'
 import toClipboard from './toClipboard'
@@ -38,6 +38,7 @@ export default class DecryptMessage extends Component {
   }
   render() {
     const {privateKey, encryptedMessage, decryptedMessage} = this.state
+    const {disabled} = this.props
 
     const setEncryptedMessage = encryptedMessage => this.setState({encryptedMessage})
     const setPrivateKey = privateKey => this.setState({privateKey})
@@ -83,7 +84,7 @@ export default class DecryptMessage extends Component {
         <div style={{marginBottom: 40}}>
           <div style={{marginBottom: 10}}>Click this button to create the decrypt the message</div>
           <div>
-            <Fab size="small" color="secondary" onClick={() => {
+            <Fab size="small" color="secondary"  disabled={disabled} onClick={() => {
               decryptMessage({privateKey, encryptedMessage}).then(decryptedMessage => this.setState({decryptedMessage}))
             }}>
               <LockIcon />
