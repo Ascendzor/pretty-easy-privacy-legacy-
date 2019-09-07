@@ -25,7 +25,7 @@ const joyrideSteps = [
   },
   {
     content: <div>
-      <div>Pretty Easy Privacy is a simple tool that was created to teach people about assymetric encryption.</div>
+      <div>Pretty Easy Privacy is a simple tool that was created to teach people about asymmetric encryption.</div>
       <div style={{marginTop: 20}}>{`There is only one new concept you will need to understand.`}</div>
     </div>,
     placement: 'center',
@@ -110,7 +110,7 @@ const joyrideSteps = [
   {
     content: <div>
       <h2>How is this possible?</h2>
-      <div>{`It's a technique called assymetric cryptography.`} <a href='https://en.wikipedia.org/wiki/Public-key_cryptography' target='_blank' >{`Here's a link to the wikipedia.`}</a></div>
+      <div>{`It's a technique called asymmetric cryptography.`} <a href='https://en.wikipedia.org/wiki/Public-key_cryptography' target='_blank' >{`Here's a link to the wikipedia.`}</a></div>
       <div>{`I don't really understand how it works, just looks like a bunch of magical mumbo mathematical jumbo to me`}</div>
       <h3>¯\_(ツ)_/¯</h3>
       <div>Give it a go</div>
